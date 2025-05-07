@@ -1,0 +1,447 @@
+<head>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <title>Test 5 Pytań</title>
+  <script type="importmap">
+    {
+      "imports": {
+        "@material/web/": "https://esm.run/@material/web/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2 class="md-typescale-display-medium">Test 5 pytań</h2>
+  <form>
+    <p>Ten krótki test pozwoli lepiej ocenić Twoje samopoczucie.</p>
+    <div class="question1">
+      <p>1. Jak oceniam mój nastrój w ciągu ostatniego tygodnia?</p>
+      <md-slider labeled min="0" max="10" value="5"></md-slider>
+    </div>
+    <div class="question2">
+      <p>
+        2. Jak oceniam moje funkcjonowanie we wszystkich obszarach życia <br />w
+        ciągu ostatniego tygodnia?
+      </p>
+      <md-slider labeled min="0" max="10" value="5"></md-slider>
+    </div>
+    <div class="question3">
+      <p>3. Które sprawy w moim życiu są obecnie najtrudniejsze?</p>
+      <div class="question3-answers">
+        <div class="question3-answer">
+          <md-checkbox
+            touch-target="wrapper"
+            data-tooltip="Częstość występowania zaburzeń psychicznych jest istotnie większa u pacjentów z przewlekłymi chorobami somatycznymi w porównaniu z osobami zdrowymi fizycznie. Częstość występowania zaburzeń psychicznych wzrasta wraz z liczbą chorób somatycznych - Gili M, Comas A, 2010"
+          ></md-checkbox>
+          <span>Zdrowie fizyczne</span>
+        </div>
+        <div class="question3-answer">
+          <md-checkbox
+            touch-target="wrapper"
+            data-tooltip="Wyniki wskazują na wyraźny związek między funkcjonowaniem rodziny a powrotem do zdrowia po epizodzie depresji - Keitner GI, 1995. Ci, którzy czują się zadowoleni ze swojego życia osobistego, są bardziej zadowoleni ze swojej kariery zawodowowej i osiągają w niej lepsze wyniki - Michael Hyatt, Living Forward, 2016"
+          ></md-checkbox>
+          <span>Rodzina</span>
+        </div>
+        <div class="question3-answer">
+          <md-checkbox
+            touch-target="wrapper"
+            data-tooltip="W latach 2018 i 2021 poprawiły się opinie badanych na temat poczucia, że wykonywane zadania są ważne i mają sens oraz, że praca jest interesująca, a także daje pewność zatrudnienia i poczucie stabilizacji - CBOS, Zadowolenie z pracy oraz oceny jej wpływu na inne sfery życia 2021"
+          ></md-checkbox>
+          <span>Praca</span>
+        </div>
+        <div class="question3-answer">
+          <md-checkbox
+            touch-target="wrapper"
+            data-tooltip="Uczestnicy Grant Study najbardziej zadowoleni z jakośc swoich relacji, zarabiali średnio o 141 000 USD rocznie w szczytowym okresie swoich zarobków (zwykle między 55. a 60. rokiem życia) od pozostałych - “Grant Study of Adult Development, 1938-2000”, 2022"
+          ></md-checkbox>
+          <span>Finanse</span>
+        </div>
+        <div class="question3-answer">
+          <md-checkbox
+            touch-target="wrapper"
+            data-tooltip="Ludzie, którzy byli najbardziej zadowoleni ze swoich związków w wieku 50 lat, byli najzdrowsi w wieku 80 lat - “Grant Study of Adult Development, 1938-2000”, 2022"
+          ></md-checkbox>
+          <span>Życie towarzyskie</span>
+        </div>
+        <div class="question3-answer">
+          <md-checkbox
+            touch-target="wrapper"
+            data-tooltip="Posiadanie hobby wiązało się z mniejszą liczbą objawów depresji i lepszą oceną własnego zdrowia, szczęścia i zadowolenia z życia - Mak HW, Noguchi T, 2023"
+          ></md-checkbox>
+          <span>Hobby/pasje</span>
+        </div>
+        <div class="question3-answer">
+          <md-checkbox
+            touch-target="wrapper"
+            data-tooltip="Większość badań wykazała, że wyższy poziom zaangażowania religijnego jest pozytywnie powiązany ze wskaźnikami dobrostanu psychicznego, natomiast negatywnie z występowaniem depresji, myśli i zachowań samobójczych oraz nadużywaniem narkotyków/alkoholu - Moreira-Almeida A, 2006"
+          ></md-checkbox>
+          <span>Życie religijne</span>
+        </div>
+        <div class="question3-answer">
+          <md-checkbox
+            touch-target="wrapper"
+            data-tooltip="„Odpoczynek jest możliwy tylko wtedy, gdy jesteśmy w zgodzie z samymi sobą. Nieraz traktujemy pracę jako próbę ucieczki od samych siebie albo jako sposób na usprawiedliwienie naszego istnienia. - Josef Pieper, Leisure: The Basis of Culture, 1948"
+          ></md-checkbox>
+          <span>Czas na odpoczynek</span>
+        </div>
+      </div>
+    </div>
+    <div class="question4">
+      <p>
+        4. Czy radzisz sobie sam z problemami czy potrzebujesz pomocy w którymś
+        z nich?
+      </p>
+      <div class="radio-container">
+        <md-radio id="q4" name="q4" value="yes" checked></md-radio>
+        <label for="q4">Tak</label>
+        <md-radio id="q4" name="q4" value="no"></md-radio>
+        <label for="q4">Nie</label>
+      </div>
+    </div>
+    <div class="question5">
+      <p>
+        5. Czy wiesz, do kogo się zwrócić po radę w celu rozwiązania
+        problemu,<br />
+        jeśli jego rozwiązanie przekracza Twoje obecne możliwości?
+      </p>
+      <div class="radio-container">
+        <md-radio id="q5" name="q5" value="yes" checked></md-radio>
+        <label for="q5">Tak</label>
+        <md-radio id="q5" name="q5" value="no"></md-radio>
+        <label for="q5">Nie</label>
+      </div>
+    </div>
+    <div class="buttons">
+      <md-outlined-button type="reset">Reset</md-outlined-button>
+      <md-filled-button type="submit">Sprawdź wynik</md-filled-button>
+    </div>
+    <md-list id="answers-list"></md-list>
+    <div class="loader"></div>
+  </form>
+  <style>
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 600px;
+      gap: 16px;
+    }
+    :root {
+      --md-sys-color-primary: #cfafae;
+      --md-sys-color-secondary: #3a4f6e;
+      --md-sys-color-on-surface: #3a4f6e;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      color: var(--md-sys-color-secondary);
+      background-color: #f5f1ed;
+      font-family: poppins, sans-serif;
+    }
+    #answers-list {
+      display: none; /* Hidden by default */
+      opacity: 0; /* Start with full transparency */
+      transform: translateY(20px); /* Start slightly below its final position */
+      transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
+      border-radius: 20px;
+      background-color: var(--md-sys-color-primary);
+    }
+
+    #answers-list.show {
+      display: block; /* Make it visible */
+      opacity: 1; /* Fully visible */
+      transform: translateY(0); /* Move to its final position */
+    }
+    .question3-answers {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    /* Tooltip styling */
+    .question3-answer md-checkbox::after {
+      content: attr(data-tooltip); /* Pobiera tekst z atrybutu data-tooltip */
+      position: absolute;
+      top: -30px; /* Pozycja nad checkboxem */
+      left: 50%; /* Wyśrodkowanie tooltipa */
+      transform: translateX(-50%);
+      background-color: #3a4f6ec9; /* Kolor tła */
+      color: #f5f1ed; /* Kolor tekstu */
+      display: flex;
+      width: 300px; /* Maksymalna szerokość tooltipa */
+      word-wrap: break-word; /* Zawijanie tekstu */
+      height: auto;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 12px;
+      white-space: normal; /* Pozwala na zawijanie tekstu */
+      z-index: 10;
+      opacity: 0; /* Domyślnie ukryty */
+      visibility: hidden;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    /* Ukrycie tooltipa domyślnie */
+    .question3-answer md-checkbox.show-tooltip::after {
+      opacity: 1;
+      visibility: visible;
+    }
+    .question3-answer {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .radio-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .buttons {
+      display: flex;
+      gap: 16px;
+    }
+    md-list-item {
+      color: var(--md-sys-color-secondary);
+    }
+
+    /* HTML: <div class="loader"></div> */
+    .loader {
+      width: 50px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 8px solid var(--md-sys-color-primary);
+      animation: l20-1 0.8s infinite linear alternate,
+        l20-2 1.6s infinite linear;
+      display: none;
+    }
+    @keyframes l20-1 {
+      0% {
+        clip-path: polygon(
+          50% 50%,
+          0 0,
+          50% 0%,
+          50% 0%,
+          50% 0%,
+          50% 0%,
+          50% 0%
+        );
+      }
+      12.5% {
+        clip-path: polygon(
+          50% 50%,
+          0 0,
+          50% 0%,
+          100% 0%,
+          100% 0%,
+          100% 0%,
+          100% 0%
+        );
+      }
+      25% {
+        clip-path: polygon(
+          50% 50%,
+          0 0,
+          50% 0%,
+          100% 0%,
+          100% 100%,
+          100% 100%,
+          100% 100%
+        );
+      }
+      50% {
+        clip-path: polygon(
+          50% 50%,
+          0 0,
+          50% 0%,
+          100% 0%,
+          100% 100%,
+          50% 100%,
+          0% 100%
+        );
+      }
+      62.5% {
+        clip-path: polygon(
+          50% 50%,
+          100% 0,
+          100% 0%,
+          100% 0%,
+          100% 100%,
+          50% 100%,
+          0% 100%
+        );
+      }
+      75% {
+        clip-path: polygon(
+          50% 50%,
+          100% 100%,
+          100% 100%,
+          100% 100%,
+          100% 100%,
+          50% 100%,
+          0% 100%
+        );
+      }
+      100% {
+        clip-path: polygon(
+          50% 50%,
+          50% 100%,
+          50% 100%,
+          50% 100%,
+          50% 100%,
+          50% 100%,
+          0% 100%
+        );
+      }
+    }
+    @keyframes l20-2 {
+      0% {
+        transform: scaleY(1) rotate(0deg);
+      }
+      49.99% {
+        transform: scaleY(1) rotate(135deg);
+      }
+      50% {
+        transform: scaleY(-1) rotate(0deg);
+      }
+      100% {
+        transform: scaleY(-1) rotate(-135deg);
+      }
+    }
+  </style>
+  <script type="module">
+    import "@material/web/all.js";
+    import { styles as typescaleStyles } from "@material/web/typography/md-typescale-styles.js";
+
+    document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+
+    const form = document.querySelector("form");
+    const resultsDiv = document.getElementById("results");
+    const answersList = document.getElementById("answers-list");
+    document
+      .querySelectorAll(".question3-answer md-checkbox")
+      .forEach((checkbox) => {
+        let tooltipTimeout;
+
+        checkbox.addEventListener("mouseenter", () => {
+          tooltipTimeout = setTimeout(() => {
+            checkbox.classList.add("show-tooltip");
+          }, 1000); // 2 sekundy opóźnienia
+        });
+
+        checkbox.addEventListener("mouseleave", () => {
+          clearTimeout(tooltipTimeout); // Anuluj wyświetlanie tooltipa, jeśli kursor opuści element
+          checkbox.classList.remove("show-tooltip");
+        });
+      });
+    const loader = document.querySelector(".loader");
+    form.addEventListener("reset", () => {
+      loader.style.display = "block";
+      setTimeout(() => {
+        loader.style.display = "none";
+      }, 1000);
+
+      answersList.style.display = "none";
+      answersList.classList.remove("show"); // Remove the animation class
+      answersList.innerHTML = "";
+    });
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      loader.style.display = "block";
+      setTimeout(() => {
+        loader.style.display = "none";
+      }, 1000); // Clear and show the answers list
+
+      answersList.innerHTML = "";
+
+      const question1 = form.querySelector(".question1 md-slider");
+
+      if (question1.value < 3) {
+        answersList.innerHTML += `<md-list-item><span style="font-weight: bold;">1. </span>Zatroszcz się o siebie ponieważ potrzebujesz troskliwej uwagi oraz pomocy. W stanach obniżonej odporności psychicznej potrzebne jest wsparcie przyjaciół, bliskich osób z rodziny lub eksperta. Weź proszę pod uwagę konsultację psychoterapeutyczną lub psychiatryczną – może być pomocna.</md-list-item><md-divider></md-divider>`;
+      } else if (question1.value < 8) {
+        answersList.innerHTML += `<md-list-item><span style="font-weight: bold;">1. </span>Większość respondentów odnajduje się w tym zakresie wartości. Wynik zachęca do identyfikacji, co wzmacnia naszą odporność a które czynniki obecnie wyczerpują nasze psychiczne zasoby. Pomocą służy punkt trzeci.</md-list-item><md-divider></md-divider>`;
+      } else {
+        answersList.innerHTML += `<md-list-item><span style="font-weight: bold;">1. </span>Odczuwasz stany z obszaru szczęścia i/lub euforii. One także mają swoje powody. Dobrze jest wiedzieć: jakie? Gratulujemy i zachęcamy do trzymania się blisko ziemi. Nie odleć ze szczęścia!</md-list-item><md-divider></md-divider>`;
+      }
+      const question2 = form.querySelector(".question2 md-slider");
+      if (question2.value < 3) {
+        answersList.innerHTML += `<md-list-item><span style="font-weight: bold;">2. </span>Stany apatii i bezradności są jednymi z najtrudniejszych do akceptacji i przejścia przez nie. Czy są to obiektywne trudności w twoim życiu, czy identyfikujesz trudności jako wewnętrzne, natury depresyjnej? W każdym razie podejmij kroki dla poprawy sytuacji życiowej, w której się znalazłeś. Pomocne może być rozwiązanie punktu trzeciego.</md-list-item><md-divider></md-divider>`;
+      } else if (question2.value < 8) {
+        answersList.innerHTML += `<md-list-item><span style="font-weight: bold;">2. </span>Większość respondentów odnajduje się w tym zakresie wartości. Wynik zachęca do identyfikacji, co zwiększa naszą sprawczość, a które czynniki obecnie wyczerpują nasze zasoby aktywności życiowej. Pomocą służy punkt trzeci.</md-list-item><md-divider></md-divider>`;
+      } else {
+        answersList.innerHTML += `<md-list-item><span style="font-weight: bold;">2. </span>Gratulujemy! Wysokie poziomy funkcjonowania są osiągalne dzięki odpowiedniemu nastawieniu i wytrwałości w pracy. Sprawdź proszę, czy rzeczywistość potwierdza twoja ocenę. Porozmawiaj z przyjaciółmi czy zaufanymi osobwami z rodziny. Tak wysoka ocena zdarza się również w iluzjach typu wielkościowego, stąd nasza staranność w tym zakresie.</md-list-item><md-divider></md-divider>`;
+      }
+
+      const question3 = form.querySelectorAll(".question3-answer md-checkbox");
+      const selectedAnswers = Array.from(question3)
+        .filter((checkbox) => checkbox.checked)
+        .map((checkbox) => ({
+          text: checkbox.nextElementSibling.textContent,
+          tooltip: checkbox.getAttribute("data-tooltip"),
+        }));
+
+      if (selectedAnswers.length === 0) {
+        answersList.innerHTML += `<md-list-item> <span style="font-weight: bold;">3. </span>W pytaniu 3 nie wybrałeś żadnej odpowiedzi. To świetna wiadomość! Pamiętaj jednak, że zidentyfikowanie trudności to pierwszy krok do ich rozwiązania.</md-list-item><md-divider></md-divider>`;
+      }
+      for (const answer of selectedAnswers) {
+        answersList.innerHTML += `
+    <md-list-item>
+      <span style="font-weight: bold;">3. ${answer.text}:</span> ${answer.tooltip}
+    </md-list-item>
+    <md-divider></md-divider>
+  `;
+      }
+
+      document.querySelectorAll('md-radio[name="q4"]').forEach((radio) => {
+        radio.addEventListener("change", () => {
+          document.querySelectorAll('md-radio[name="q4"]').forEach((r) => {
+            r.removeAttribute("checked");
+          });
+          radio.setAttribute("checked", "");
+        });
+      });
+      const question4 = form.querySelector('md-radio[name="q4"][checked]');
+      if (question4 && question4.getAttribute("value") === "yes") {
+        answersList.innerHTML += `
+    <md-list-item><span style="font-weight: bold;">4. </span>Radzenie sobie samemu z problemami to ważna umiejętność. Gratulacje!</md-list-item><md-divider></md-divider>`;
+      } else {
+        answersList.innerHTML += `
+    <md-list-item><span style="font-weight: bold;">4. </span>Nie jesteś sam. Wiele osób zmaga się z trudnościami, które wydają się nie do pokonania. Ważne jest, aby wiedzieć, że pomoc jest dostępna i można ją znaleźć w różnych miejscach.</md-list-item><md-divider></md-divider>
+  `;
+      }
+
+      document.querySelectorAll('md-radio[name="q5"]').forEach((radio) => {
+        radio.addEventListener("change", () => {
+          document.querySelectorAll('md-radio[name="q5"]').forEach((r) => {
+            r.removeAttribute("checked");
+          });
+          radio.setAttribute("checked", "");
+        });
+      });
+
+      const question5 = form.querySelector('md-radio[name="q5"][checked]');
+      if (question5 && question5.getAttribute("value") === "yes") {
+        answersList.innerHTML += `
+    <md-list-item><span style="font-weight: bold;">5. </span>Świetnie, że wiesz, do kogo się zwrócić po pomoc!</md-list-item>
+  `;
+      } else if (question5) {
+        answersList.innerHTML += `
+    <md-list-item><span style="font-weight: bold;">5. </span>Warto zastanowić się, kto w Twoim otoczeniu może Ci pomóc w trudnych sytuacjach.</md-list-item>
+  `;
+      }
+      answersList.classList.add("show");
+
+      setTimeout(() => {
+        answersList.style.display = "block";
+      }, 1000);
+      answersList.scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  </script>
+</body>

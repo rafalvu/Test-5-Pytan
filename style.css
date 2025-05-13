@@ -1,0 +1,205 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 600px;
+  gap: 8px;
+}
+:root {
+  --md-sys-color-primary: #cfafae;
+  --md-sys-color-secondary: #3a4f6e;
+  --md-sys-color-on-surface: #3a4f6e;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  color: var(--md-sys-color-secondary);
+  background-color: #f5f1ed;
+  font-family: poppins, sans-serif;
+}
+i {
+  background-color: var(--md-sys-color-primary);
+  border-radius: 20px;
+  padding: 8px;
+}
+a {
+  text-decoration: none;
+  color: var(--md-sys-color-secondary);
+}
+
+.card {
+  background-color: var(--md-sys-color-primary);
+  border-radius: 20px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+#answers-list {
+  display: none; /* Hidden by default */
+  opacity: 0; /* Start with full transparency */
+  transform: translateY(20px); /* Start slightly below its final position */
+  transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
+  border-radius: 20px;
+  background-color: var(--md-sys-color-primary);
+}
+
+#answers-list.show {
+  display: block; /* Make it visible */
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Move to its final position */
+}
+.question3-answers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* Tooltip styling */
+.question3-answer md-checkbox::after {
+  content: attr(data-tooltip); /* Pobiera tekst z atrybutu data-tooltip */
+  position: absolute;
+  top: -30px; /* Pozycja nad checkboxem */
+  left: 50%; /* Wyśrodkowanie tooltipa */
+  transform: translateX(-50%);
+  background-color: #3a4f6ec9; /* Kolor tła */
+  color: #f5f1ed; /* Kolor tekstu */
+  display: flex;
+  width: 300px; /* Maksymalna szerokość tooltipa */
+  word-wrap: break-word; /* Zawijanie tekstu */
+  height: auto;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: normal; /* Pozwala na zawijanie tekstu */
+  z-index: 10;
+  opacity: 0; /* Domyślnie ukryty */
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Ukrycie tooltipa domyślnie */
+.question3-answer md-checkbox.show-tooltip::after {
+  opacity: 1;
+  visibility: visible;
+}
+.question3-answer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.radio-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+md-list {
+  background-color: var(--md-sys-color-primary);
+}
+md-list-item:hover {
+  background-color: #b38f8e; /* Darkened primary color */
+  border-radius: 20px;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid var(--md-sys-color-primary);
+  animation: l20-1 0.8s infinite linear alternate, l20-2 1.6s infinite linear;
+  display: none;
+}
+@keyframes l20-1 {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+  }
+  12.5% {
+    clip-path: polygon(
+      50% 50%,
+      0 0,
+      50% 0%,
+      100% 0%,
+      100% 0%,
+      100% 0%,
+      100% 0%
+    );
+  }
+  25% {
+    clip-path: polygon(
+      50% 50%,
+      0 0,
+      50% 0%,
+      100% 0%,
+      100% 100%,
+      100% 100%,
+      100% 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      50% 50%,
+      0 0,
+      50% 0%,
+      100% 0%,
+      100% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+  62.5% {
+    clip-path: polygon(
+      50% 50%,
+      100% 0,
+      100% 0%,
+      100% 0%,
+      100% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+  75% {
+    clip-path: polygon(
+      50% 50%,
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      50% 50%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+}
+@keyframes l20-2 {
+  0% {
+    transform: scaleY(1) rotate(0deg);
+  }
+  49.99% {
+    transform: scaleY(1) rotate(135deg);
+  }
+  50% {
+    transform: scaleY(-1) rotate(0deg);
+  }
+  100% {
+    transform: scaleY(-1) rotate(-135deg);
+  }
+}

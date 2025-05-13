@@ -33,7 +33,7 @@ form.addEventListener("reset", () => {
 
   answersList.style.display = "none";
   answersList.classList.remove("show"); // Remove the animation class
-  answersList.innerHTML = "";
+  //   answersList.innerHTML = "";
 });
 
 form.addEventListener("submit", (event) => {
@@ -99,15 +99,6 @@ form.addEventListener("submit", (event) => {
 `;
   }
 
-  document.querySelectorAll('md-radio[name="q4"]').forEach((radio) => {
-    radio.addEventListener("change", () => {
-      document.querySelectorAll('md-radio[name="q4"]').forEach((r) => {
-        r.removeAttribute("checked");
-      });
-      radio.setAttribute("checked", "");
-    });
-  });
-
   document.querySelectorAll('md-radio[name="q5"]').forEach((radio) => {
     radio.addEventListener("change", () => {
       document.querySelectorAll('md-radio[name="q5"]').forEach((r) => {
@@ -128,6 +119,7 @@ form.addEventListener("submit", (event) => {
 <md-list-item><span style="font-weight: bold;">5. </span>Zastanów się, w jakim obszarze potrzebujesz wsparcia i gdzie możesz go poszukać (punkt 4).</md-list-item>
 `;
   }
+  answersList.style.display = "block";
   answersList.classList.add("show");
 
   answersList.scrollIntoView({

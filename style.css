@@ -107,6 +107,7 @@ md-list {
 md-list-item:hover {
   background-color: #b38f8e; /* Darkened primary color */
   border-radius: 20px;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 
 /* HTML: <div class="loader"></div> */
